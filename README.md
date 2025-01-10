@@ -21,8 +21,8 @@ Here are some screenshots of my recent work:
 
 ![Project - Login](src/assets/images/git/1.png)
 ![Project - Home ](src/assets/images/git/2.png)
-![Project - About Me ](src/assets/images/git/4.png)
 ![Project - Page Not Found ](src/assets/images/git/3.png)
+![Project - About Me ](src/assets/images/git/4.png)
 
 ## Tech Stack
 
@@ -36,6 +36,7 @@ Here are some screenshots of my recent work:
 - **Development Tools:**
   - VS Code
   - Git and GitHub
+  - Vercel
 
 ## Architecture
 

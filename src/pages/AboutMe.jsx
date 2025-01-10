@@ -71,7 +71,7 @@ const AboutMe = ({title = ""}) => {
               About the Developer Profile
             </a>
             <p className="text-sm font-bold mt-2 text-[#f6d970]">
-              Tech Stack: React, ViteJS, TailwindCSS, React Router
+              Tech Stack: React, ViteJS, TailwindCSS, React Router, Vercel
               <br />
               <p className="text-lg text-white my-2">#Features:</p>
               <ul className="list-disc list-inside mt-2 font-normal text-gray-300 text-left">
