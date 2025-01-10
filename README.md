@@ -60,7 +60,7 @@ To get this project up and running on your local machine, follow the steps below
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/developer-profile.git
+   git clone https://github.com/Mrprayag077/Authify-assignmnet
 
    ```
 
