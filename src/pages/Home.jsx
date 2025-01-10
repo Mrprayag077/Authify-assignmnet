@@ -85,7 +85,7 @@ function Home() {
         </div>
       </div>
     </div>
-    <AboutMe />
+    <AboutMe title="Developer" />
   </>
   );
 }

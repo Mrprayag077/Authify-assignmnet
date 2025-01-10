@@ -13,6 +13,7 @@ import {
 import React from "react";
 import { HeaderTitle, Quotes } from "../component";
 import { useNavigate } from "react-router-dom";
+import AboutMe from "./AboutMe";
 
 function Login() {
   const navigate = useNavigate();
@@ -296,6 +297,7 @@ function Login() {
           </div>
         </div>
       )}
+      <AboutMe />
     </>
   );
 }
