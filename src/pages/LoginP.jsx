@@ -23,6 +23,7 @@ function Login() {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const [rememberMe, setRememberMe] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -37,6 +38,13 @@ function Login() {
       }, 100);
     }
   }, [navigate]);
+
+  useEffect(() => {
+    const storedRememberMe = localStorage.getItem("rememberMe");
+    if (storedRememberMe === "true") {
+      setRememberMe(true);
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -113,12 +121,12 @@ function Login() {
   return (
     <>
       {!localStorage.getItem("authToken") && (
-        <div className="flex flex-col-reverse lg:flex-row h-full my-10 md:px-1 lg:px-16 bg-gray-50/10">
+        <div className="h-full flex flex-col-reverse lg:flex-row my-10 md:px-1 lg:px-16 bg-gray-50/10">
           <div className="hidden md:flex flex-col gap-2 w-1/2 bg-cover bg-center items-center justify-center">
             <img
               src={LoginImg}
               alt="Login"
-              className="animate-float-slow origin-top object-cover h-[500px] w-[500px]"
+              className="animate-float-slow origin-top object-cover h-[450px] w-[450px]"
             />
             <div className="">
               <Quotes />
@@ -126,7 +134,7 @@ function Login() {
           </div>
           <div className="flex items-center justify-center w-full md:w-1/2">
             <div className="max-w-xl w-full">
-              <div className="bg-white shadow-none lg:shadow-lg rounded-2xl p-8">
+              <div className="bg-white shadow-none lg:shadow-lg rounded-2xl p-6">
                 <HeaderTitle />
                 <div className="space-y-3">
                   <button className="custom-button">
@@ -237,7 +245,19 @@ function Login() {
                   )}
                   <div className="flex justify-between items-center my-4">
                     <label className="flex items-center">
-                      <input type="checkbox" className="mr-2" />
+                      <input
+                        type="checkbox"
+                        className="mr-2"
+                        checked={rememberMe}
+                        onChange={() => {
+                          const newValue = !rememberMe;
+                          setRememberMe(newValue);
+                          localStorage.setItem(
+                            "rememberMe",
+                            JSON.stringify(newValue)
+                          );
+                        }}
+                      />
                       <span>Remember Me</span>
                     </label>
                     <a
