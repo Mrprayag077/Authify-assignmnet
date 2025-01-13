@@ -4,12 +4,13 @@ import {
   Route,
   Routes,
   Navigate,
+  useNavigate,
 } from "react-router-dom";
 import { ProtectedRoute } from "./component";
 import { Login, Home, NotFound } from "./pages";
-import useCheckProductionMode from "./hooks/useCheckProductionMode";
 
 function App() {
+
   return (
     <Router>
       <Routes>
