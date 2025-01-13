@@ -20,7 +20,11 @@ const AboutMe = ({title = ""}) => {
         className="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg cursor-pointer hover:bg-indigo-700 transition-all duration-300 glow-on-hover"
         title="Developer Profile"
       >
-        <span className={`text-md flex justify-center items-center ${title ? 'gap-2':''}`}>
+        <span
+          className={`text-md flex justify-center items-center ${
+            title ? "gap-2" : ""
+          }`}
+        >
           <img src={CoderIcon} className="w-6 h-6 glow-icon" />
           <span>{title}</span>
         </span>
@@ -76,6 +80,7 @@ const AboutMe = ({title = ""}) => {
               <p className="text-lg text-white my-2">#Features:</p>
               <ul className="list-disc list-inside mt-2 font-normal text-gray-300 text-left">
                 <li>Protected routing with session management</li>
+                <li>Auto-Sync Logout Across All Window Tabs</li>
                 <li>Dynamic Quotes section in login page</li>
                 <li>Form validation (login)</li>
                 <li>Non-found page with a custom 404</li>

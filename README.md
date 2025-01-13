@@ -5,6 +5,7 @@
 **Features:**
 
 - Protected routing with session management.
+- Auto-Sync Logout Across All Window Tabs.
 - Dynamic Quotes section in login page.
 - Form validation for login forms.
 - Non-found page with a custom 404 message.
